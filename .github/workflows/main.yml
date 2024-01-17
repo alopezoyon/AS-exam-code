@@ -21,4 +21,4 @@ jobs:
         run: npm test
 
       - name: Construir imagen
-        run: cloudposse/github-action-docker-compose-test-run@main
+        uses: cloudposse/github-action-docker-compose-test-run@main

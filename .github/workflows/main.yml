@@ -1,0 +1,24 @@
+name: ej1-workflow
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  tareas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bajar código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        run: actions/setup-node@v4
+
+      - name: Ejecutar comando
+        run: npm i
+
+      - name: Ejecutar comando
+        run: npm test
+
+      - name: Construir imagen
+        run: cloudposse/github-action-docker-compose-test-run@main

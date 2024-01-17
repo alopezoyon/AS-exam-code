@@ -11,7 +11,7 @@ jobs:
       - name: Bajar código
         uses: actions/checkout@v4
 
-      - name: Configurar Python
+      - name: Configurar Node
         run: actions/setup-node@v4
 
       - name: Ejecutar comando

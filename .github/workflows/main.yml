@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Configurar Node
-        run: actions/setup-node@v4
+        uses: actions/setup-node@v4
 
       - name: Ejecutar comando
         run: npm i
@@ -21,4 +21,4 @@ jobs:
         run: npm test
 
       - name: Construir imagen
-        run: cloudposse/github-action-docker-compose-test-run@main
+        uses: cloudposse/github-action-docker-compose-test-run@main

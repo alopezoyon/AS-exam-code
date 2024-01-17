@@ -2,7 +2,7 @@ FROM node:slim
 
 WORKDIR /app
 
-COPY app.js /code/
-COPY test.js /code/
+COPY app.js /app/
+COPY test.js /app/
 
 RUN npm install
